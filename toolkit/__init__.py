@@ -5,5 +5,7 @@ mean a module claimed the export line without landing the implementation --
 keep this file additive-only, one line per merged module.
 """
 
-__all__: list[str] = []
 from toolkit.lru_cache import LRUCache as LRUCache
+from toolkit.graph_topo_sort import topological_sort as topological_sort
+
+__all__: list[str] = ["LRUCache", "topological_sort"]
