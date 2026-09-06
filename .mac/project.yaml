@@ -1,0 +1,28 @@
+schema: mac.repository_contract.v1
+project: mac-fleet-canary
+canonical_remote_url: https://github.com/jordanhubbard/mac-fleet-canary.git
+default_branch: main
+platforms:
+  - darwin
+  - linux
+toolchain:
+  required_commands:
+    - python3
+    - git
+  minimum_versions:
+    python3: "3.10"
+bootstrap:
+  command: python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
+  creates:
+    - .venv/bin/python
+    - .venv/bin/pytest
+    - .venv/bin/mypy
+test:
+  command: .venv/bin/pytest -q && .venv/bin/mypy toolkit
+evidence:
+  required:
+    - repo.head_sha
+    - repo.pushed
+    - repo.dirty
+    - repo.files_changed
+    - tests
