@@ -6,6 +6,7 @@ keep this file additive-only, one line per merged module.
 """
 
 from toolkit.lru_cache import LRUCache as LRUCache
+from toolkit.rate_limiter import RateLimiter as RateLimiter
 from toolkit.union_find import UnionFind as UnionFind
 
-__all__: list[str] = ["LRUCache", "UnionFind"]
+__all__: list[str] = ["LRUCache", "RateLimiter", "UnionFind"]
