@@ -6,3 +6,4 @@ keep this file additive-only, one line per merged module.
 """
 
 __all__: list[str] = []
+from toolkit.lru_cache import LRUCache as LRUCache
