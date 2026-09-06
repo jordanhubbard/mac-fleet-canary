@@ -43,7 +43,7 @@ with CI green.
 | `interval_tree` | Interval insert + overlap query | ⬜ open | |
 | `rate_limiter` | Token-bucket rate limiter, thread-safe | ⬜ open | |
 | `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | |
-| `skiplist` | Probabilistic skip list: insert, search, delete | ⬜ open | |
+| `skiplist` | Probabilistic skip list: insert, search, delete | ✅ merged | PR pending |
 
 ## Victory conditions
 
