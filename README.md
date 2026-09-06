@@ -39,7 +39,7 @@ with CI green.
 | `union_find` | Disjoint-set with path compression + union by rank | ⬜ open | |
 | `lexer` | Tiny arithmetic-expression tokenizer (`+ - * / ( ) numbers`) | ⬜ open | |
 | `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | |
-| `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | |
+| `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | [#2](https://github.com/jordanhubbard/mac-fleet-canary/pull/2) |
 | `interval_tree` | Interval insert + overlap query | ⬜ open | |
 | `rate_limiter` | Token-bucket rate limiter, thread-safe | ⬜ open | |
 | `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | |
