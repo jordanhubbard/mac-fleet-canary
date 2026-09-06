@@ -6,3 +6,5 @@ keep this file additive-only, one line per merged module.
 """
 
 __all__: list[str] = []
+
+from .lexer import LexerError, Token, TokenType, tokenize
