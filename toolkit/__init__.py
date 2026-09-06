@@ -5,4 +5,6 @@ mean a module claimed the export line without landing the implementation --
 keep this file additive-only, one line per merged module.
 """
 
-__all__: list[str] = []
+from .union_find import UnionFind
+
+__all__: list[str] = ["UnionFind"]
