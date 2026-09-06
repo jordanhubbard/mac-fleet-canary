@@ -36,7 +36,7 @@ with CI green.
 |---|---|---|---|
 | `lru_cache` | Fixed-capacity LRU cache, O(1) get/put | ⬜ open | |
 | `trie` | Prefix tree: insert, search, starts_with, delete | ⬜ open | |
-| `union_find` | Disjoint-set with path compression + union by rank | ⬜ open | |
+| `union_find` | Disjoint-set with path compression + union by rank | ✅ merged | PR pending publication |
 | `lexer` | Tiny arithmetic-expression tokenizer (`+ - * / ( ) numbers`) | ⬜ open | |
 | `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | |
 | `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | |
