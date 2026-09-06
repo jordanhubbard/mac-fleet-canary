@@ -67,8 +67,11 @@ conflict resolution or human git intervention:
 1. Claim exactly one unchecked module from the table above.
 2. Work in your own git worktree, on a branch named `add-<module>`.
 3. Implement `toolkit/<module>.py`, `tests/test_<module>.py`, add the
-   `__init__.py` export, and update this README's table row (status + your
-   PR link once opened).
+   `__init__.py` export. In your PR, update this README's table row's PR
+   link column only -- leave Status as the open box. A PR cannot correctly
+   claim its own module is merged; that row edit belongs in a fast-follow
+   commit (or the merge itself, via a bot) made *after* the PR actually
+   merges, not before.
 4. Open a PR. CI must pass before merge.
 5. Do not touch any other module's files in your PR — if your work
    genuinely needs to touch shared infrastructure (`toolkit/__init__.py`,
