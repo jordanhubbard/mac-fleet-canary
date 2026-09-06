@@ -41,7 +41,7 @@ with CI green.
 | `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | |
 | `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | |
 | `interval_tree` | Interval insert + overlap query | ⬜ open | |
-| `rate_limiter` | Token-bucket rate limiter, thread-safe | ⬜ open | |
+| `rate_limiter` | Token-bucket rate limiter, thread-safe | ✅ merged | [#7](https://github.com/jordanhubbard/mac-fleet-canary/pull/7) |
 | `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | |
 | `skiplist` | Probabilistic skip list: insert, search, delete | ⬜ open | |
 
