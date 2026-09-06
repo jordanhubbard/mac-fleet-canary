@@ -6,3 +6,7 @@ keep this file additive-only, one line per merged module.
 """
 
 __all__: list[str] = []
+
+from toolkit.lexer import LexerError, Token, TokenType, tokenize
+
+__all__ += ["LexerError", "Token", "TokenType", "tokenize"]
