@@ -38,6 +38,20 @@ class SkipList(Generic[T]):
     def __len__(self) -> int:
         return self._size
 
+    def __contains__(self, value: object) -> bool:
+        current = self._head
+        for level in range(self._level, -1, -1):
+            next_node = current.forward[level]
+            while (
+                next_node is not None
+                and next_node.value is not None
+                and next_node.value < value
+            ):
+                current = next_node
+                next_node = current.forward[level]
+        candidate = current.forward[0]
+        return candidate is not None and candidate.value == value
+
     def __iter__(self) -> Iterator[T]:
         current = self._head.forward[0]
         while current is not None:
