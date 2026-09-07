@@ -19,6 +19,7 @@ from toolkit.interval_tree import Interval as Interval
 from toolkit.interval_tree import IntervalTree as IntervalTree
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.rate_limiter import RateLimiter as RateLimiter
+from toolkit.skiplist import SkipList as SkipList
 from toolkit.trie import Trie as Trie
 from toolkit.union_find import UnionFind as UnionFind
 
@@ -30,6 +31,7 @@ __all__: list[str] = [
     "LexerError",
     "LRUCache",
     "RateLimiter",
+    "SkipList",
     "Token",
     "TokenType",
     "Trie",
