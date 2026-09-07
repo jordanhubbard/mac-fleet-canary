@@ -8,6 +8,7 @@ keep this file additive-only, one line per merged module.
 from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.bktree import BKTree as BKTree
 from toolkit.graph_topo_sort import topological_sort as topological_sort
+from toolkit.interval_tree import Interval, IntervalTree
 from toolkit.lexer import LexerError as LexerError
 from toolkit.lexer import Token as Token
 from toolkit.lexer import TokenType as TokenType
@@ -19,6 +20,8 @@ from toolkit.union_find import UnionFind as UnionFind
 __all__: list[str] = [
     "BKTree",
     "BloomFilter",
+    "Interval",
+    "IntervalTree",
     "LexerError",
     "LRUCache",
     "RateLimiter",
