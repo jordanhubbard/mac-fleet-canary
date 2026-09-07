@@ -8,6 +8,8 @@ keep this file additive-only, one line per merged module.
 from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.bktree import BKTree as BKTree
 from toolkit.graph_topo_sort import topological_sort as topological_sort
+from toolkit.interval_tree import Interval as Interval
+from toolkit.interval_tree import IntervalTree as IntervalTree
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.rate_limiter import RateLimiter as RateLimiter
 from toolkit.union_find import UnionFind as UnionFind
@@ -15,6 +17,8 @@ from toolkit.union_find import UnionFind as UnionFind
 __all__: list[str] = [
     "BKTree",
     "BloomFilter",
+    "Interval",
+    "IntervalTree",
     "LRUCache",
     "RateLimiter",
     "UnionFind",
