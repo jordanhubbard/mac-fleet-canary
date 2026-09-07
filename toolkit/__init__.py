@@ -8,5 +8,14 @@ keep this file additive-only, one line per merged module.
 from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.union_find import UnionFind as UnionFind
+from toolkit.lexer import LexerError, Token, TokenType, tokenize
 
-__all__: list[str] = ["BloomFilter", "LRUCache", "UnionFind"]
+__all__: list[str] = [
+    "BloomFilter",
+    "LRUCache",
+    "UnionFind",
+    "LexerError",
+    "Token",
+    "TokenType",
+    "tokenize",
+]
