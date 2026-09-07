@@ -15,6 +15,8 @@ from toolkit.lexer import LexerError as LexerError
 from toolkit.lexer import Token as Token
 from toolkit.lexer import TokenType as TokenType
 from toolkit.lexer import tokenize as tokenize
+from toolkit.interval_tree import Interval as Interval
+from toolkit.interval_tree import IntervalTree as IntervalTree
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.rate_limiter import RateLimiter as RateLimiter
 from toolkit.trie import Trie as Trie
