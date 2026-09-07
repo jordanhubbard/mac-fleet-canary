@@ -7,8 +7,15 @@ keep this file additive-only, one line per merged module.
 
 from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.graph_topo_sort import topological_sort as topological_sort
+from toolkit.interval_tree import Interval, IntervalTree
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.union_find import UnionFind as UnionFind
-from toolkit.graph_topo_sort import topological_sort as topological_sort
 
-__all__: list[str] = ["BloomFilter", "LRUCache", "UnionFind", "topological_sort"]
+__all__: list[str] = [
+    "BloomFilter",
+    "Interval",
+    "IntervalTree",
+    "LRUCache",
+    "UnionFind",
+    "topological_sort",
+]
