@@ -9,13 +9,14 @@ from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.graph_topo_sort import topological_sort as topological_sort
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.rate_limiter import RateLimiter as RateLimiter
+from toolkit.trie import Trie as Trie
 from toolkit.union_find import UnionFind as UnionFind
-from toolkit.graph_topo_sort import topological_sort as topological_sort
 
 __all__: list[str] = [
     "BloomFilter",
     "LRUCache",
     "RateLimiter",
+    "Trie",
     "UnionFind",
     "topological_sort",
 ]
