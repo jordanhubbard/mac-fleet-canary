@@ -38,7 +38,7 @@ with CI green.
 | `trie` | Prefix tree: insert, search, starts_with, delete | ⬜ open | |
 | `union_find` | Disjoint-set with path compression + union by rank | ✅ merged | [#1](https://github.com/jordanhubbard/mac-fleet-canary/pull/1) |
 | `lexer` | Tiny arithmetic-expression tokenizer (`+ - * / ( ) numbers`) | ⬜ open | |
-| `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | |
+| `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | [#4](https://github.com/jordanhubbard/mac-fleet-canary/pull/4) |
 | `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | |
 | `interval_tree` | Interval insert + overlap query | ⬜ open | |
 | `rate_limiter` | Token-bucket rate limiter, thread-safe | ⬜ open | |

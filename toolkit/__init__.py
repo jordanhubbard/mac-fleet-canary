@@ -7,5 +7,6 @@ keep this file additive-only, one line per merged module.
 
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.union_find import UnionFind as UnionFind
+from toolkit.graph_topo_sort import topological_sort as topological_sort
 
-__all__: list[str] = ["LRUCache", "UnionFind"]
+__all__: list[str] = ["LRUCache", "UnionFind", "topological_sort"]
