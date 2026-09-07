@@ -43,7 +43,7 @@ with CI green.
 | `interval_tree` | Interval insert + overlap query | ⬜ open | [PR #6](https://github.com/jordanhubbard/mac-fleet-canary/pull/6) |
 | `rate_limiter` | Token-bucket rate limiter, thread-safe | ✅ merged | [#7](https://github.com/jordanhubbard/mac-fleet-canary/pull/7) |
 | `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | [#5](https://github.com/jordanhubbard/mac-fleet-canary/pull/5) |
-| `skiplist` | Probabilistic skip list: insert, search, delete | ⬜ open | |
+| `skiplist` | Probabilistic skip list: insert, search, delete | ⬜ open | PR pending |
 
 ## Victory conditions
 
