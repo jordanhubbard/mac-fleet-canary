@@ -40,7 +40,7 @@ with CI green.
 | `lexer` | Tiny arithmetic-expression tokenizer (`+ - * / ( ) numbers`) | ⬜ open | |
 | `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | [#4](https://github.com/jordanhubbard/mac-fleet-canary/pull/4) |
 | `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | [#2](https://github.com/jordanhubbard/mac-fleet-canary/pull/2) |
-| `interval_tree` | Interval insert + overlap query | ⬜ open | |
+| `interval_tree` | Interval insert + overlap query | ⬜ open | [PR #6](https://github.com/jordanhubbard/mac-fleet-canary/pull/6) |
 | `rate_limiter` | Token-bucket rate limiter, thread-safe | ✅ merged | [#7](https://github.com/jordanhubbard/mac-fleet-canary/pull/7) |
 | `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | |
 | `skiplist` | Probabilistic skip list: insert, search, delete | ⬜ open | |
