@@ -7,7 +7,6 @@ keep this file additive-only, one line per merged module.
 
 from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.bktree import BKTree as BKTree
-from toolkit.interval_tree import Interval, IntervalTree
 from toolkit.graph_topo_sort import topological_sort as topological_sort
 from toolkit.interval_tree import Interval as Interval
 from toolkit.interval_tree import IntervalTree as IntervalTree
