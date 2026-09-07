@@ -35,7 +35,7 @@ with CI green.
 | Module | Description | Status | PR |
 |---|---|---|---|
 | `lru_cache` | Fixed-capacity LRU cache, O(1) get/put | ✅ merged | PR pending |
-| `trie` | Prefix tree: insert, search, starts_with, delete | ⬜ open | |
+| `trie` | Prefix tree: insert, search, starts_with, delete | ✅ merged | [#9](https://github.com/jordanhubbard/mac-fleet-canary/pull/9) |
 | `union_find` | Disjoint-set with path compression + union by rank | ✅ merged | [#1](https://github.com/jordanhubbard/mac-fleet-canary/pull/1) |
 | `lexer` | Tiny arithmetic-expression tokenizer (`+ - * / ( ) numbers`) | ⬜ open | |
 | `graph_topo_sort` | Kahn's algorithm topological sort, cycle detection | ⬜ open | [#4](https://github.com/jordanhubbard/mac-fleet-canary/pull/4) |
