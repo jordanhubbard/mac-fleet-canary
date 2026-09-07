@@ -9,5 +9,15 @@ from toolkit.bloom_filter import BloomFilter as BloomFilter
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.union_find import UnionFind as UnionFind
 from toolkit.graph_topo_sort import topological_sort as topological_sort
+from toolkit.lexer import LexerError, Token, TokenType, tokenize
 
-__all__: list[str] = ["BloomFilter", "LRUCache", "UnionFind", "topological_sort"]
+__all__: list[str] = [
+    "BloomFilter",
+    "LRUCache",
+    "UnionFind",
+    "LexerError",
+    "Token",
+    "TokenType",
+    "tokenize",
+    "topological_sort",
+]
