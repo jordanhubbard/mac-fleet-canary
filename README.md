@@ -42,7 +42,7 @@ with CI green.
 | `bloom_filter` | Bit-array Bloom filter with configurable false-positive rate | ⬜ open | [#2](https://github.com/jordanhubbard/mac-fleet-canary/pull/2) |
 | `interval_tree` | Interval insert + overlap query | ⬜ open | |
 | `rate_limiter` | Token-bucket rate limiter, thread-safe | ⬜ open | |
-| `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | |
+| `bktree` | BK-tree for approximate string matching (edit distance) | ⬜ open | [#5](https://github.com/jordanhubbard/mac-fleet-canary/pull/5) |
 | `skiplist` | Probabilistic skip list: insert, search, delete | ⬜ open | |
 
 ## Victory conditions
