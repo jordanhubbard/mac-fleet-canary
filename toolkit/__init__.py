@@ -17,6 +17,7 @@ from toolkit.lexer import TokenType as TokenType
 from toolkit.lexer import tokenize as tokenize
 from toolkit.lru_cache import LRUCache as LRUCache
 from toolkit.rate_limiter import RateLimiter as RateLimiter
+from toolkit.trie import Trie as Trie
 from toolkit.union_find import UnionFind as UnionFind
 
 __all__: list[str] = [
@@ -29,6 +30,7 @@ __all__: list[str] = [
     "RateLimiter",
     "Token",
     "TokenType",
+    "Trie",
     "UnionFind",
     "tokenize",
     "topological_sort",
