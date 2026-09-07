@@ -13,7 +13,9 @@ def test_insert_search_and_iteration_are_ordered() -> None:
 
     assert list(values) == [1, 3, 5, 7, 9]
     assert all(values.search(value) for value in [1, 3, 5, 7, 9])
+    assert 9 in values
     assert not values.search(4)
+    assert 4 not in values
     assert len(values) == 5
 
 
