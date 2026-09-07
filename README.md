@@ -34,7 +34,7 @@ with CI green.
 
 | Module | Description | Status | PR |
 |---|---|---|---|
-| `lru_cache` | Fixed-capacity LRU cache, O(1) get/put | ⬜ open | |
+| `lru_cache` | Fixed-capacity LRU cache, O(1) get/put | ✅ merged | PR pending |
 | `trie` | Prefix tree: insert, search, starts_with, delete | ⬜ open | |
 | `union_find` | Disjoint-set with path compression + union by rank | ⬜ open | |
 | `lexer` | Tiny arithmetic-expression tokenizer (`+ - * / ( ) numbers`) | ⬜ open | |
