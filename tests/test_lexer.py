@@ -36,6 +36,22 @@ def test_negative_number_keeps_unary_minus_separate() -> None:
     ]
 
 
+def test_readme_quick_start_expression() -> None:
+    assert [
+        (token.type.value, token.value, token.position)
+        for token in tokenize(" -12.5 + (3 * 4) ")
+    ] == [
+        ("MINUS", "-", 1),
+        ("NUMBER", "12.5", 2),
+        ("PLUS", "+", 7),
+        ("LEFT_PAREN", "(", 9),
+        ("NUMBER", "3", 10),
+        ("STAR", "*", 12),
+        ("NUMBER", "4", 14),
+        ("RIGHT_PAREN", ")", 15),
+    ]
+
+
 @pytest.mark.parametrize(
     "expression", ["2 ^ 3", "1 + \u00b2", ".5", "5.", "1.2.3"]
 )
