@@ -85,5 +85,28 @@ pip install -e ".[dev]"
 pytest
 ```
 
+## Lexer quick start
+
+Tokenize an arithmetic expression and inspect each token's type, value, and
+zero-based character position:
+
+```python
+from toolkit.lexer import tokenize
+
+for token in tokenize(" -12.5 + (3 * 4) "):
+    print((token.type.value, token.value, token.position))
+```
+
+```text
+('MINUS', '-', 1)
+('NUMBER', '12.5', 2)
+('PLUS', '+', 7)
+('LEFT_PAREN', '(', 9)
+('NUMBER', '3', 10)
+('STAR', '*', 12)
+('NUMBER', '4', 14)
+('RIGHT_PAREN', ')', 15)
+```
+
 CI (`.github/workflows/ci.yml`) runs `pytest` and a type check on every PR
 and on `main`.
