@@ -46,6 +46,33 @@ def test_get_missing_key_raises_key_error() -> None:
         cache.get("missing")
 
 
+def test_peek_returns_value_without_updating_recency() -> None:
+    cache = LRUCache[str, int](2)
+    cache.put("a", 1)
+    cache.put("b", 2)
+
+    assert cache.peek("a") == 1
+    cache.put("c", 3)
+
+    with pytest.raises(KeyError):
+        cache.get("a")
+    assert cache.get("b") == 2
+
+
+def test_peek_missing_key_does_not_update_recency() -> None:
+    cache = LRUCache[str, int](2)
+    cache.put("a", 1)
+    cache.put("b", 2)
+
+    with pytest.raises(KeyError):
+        cache.peek("missing")
+    cache.put("c", 3)
+
+    with pytest.raises(KeyError):
+        cache.get("a")
+    assert cache.get("b") == 2
+
+
 def test_non_positive_capacity_is_rejected() -> None:
     with pytest.raises(ValueError, match="capacity must be positive"):
         LRUCache[str, int](0)
