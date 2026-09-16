@@ -15,6 +15,20 @@ def test_tokenizes_operators_and_ignores_whitespace() -> None:
     ]
 
 
+def test_token_end_marks_exclusive_source_offset() -> None:
+    expression = " 12.5 + 3"
+    tokens = tokenize(expression)
+
+    assert [(token.position, token.end) for token in tokens] == [
+        (1, 5),
+        (6, 7),
+        (8, 9),
+    ]
+    assert [expression[token.position : token.end] for token in tokens] == [
+        token.value for token in tokens
+    ]
+
+
 def test_tokenizes_nested_parentheses() -> None:
     assert [token.type for token in tokenize("((10-2)*3)")] == [
         TokenType.LEFT_PAREN,

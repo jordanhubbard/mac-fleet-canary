@@ -24,6 +24,12 @@ class Token:
     value: str
     position: int
 
+    @property
+    def end(self) -> int:
+        """Return the exclusive source offset immediately after this token."""
+
+        return self.position + len(self.value)
+
 
 class LexerError(ValueError):
     """Raised when an expression contains a character that cannot be tokenized."""
