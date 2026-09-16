@@ -32,6 +32,23 @@ class Trie:
         node = self._find_node(prefix)
         return node is not None and (node.is_word or bool(node.children))
 
+    def words_with_prefix(self, prefix: str) -> list[str]:
+        """Return stored words beginning with *prefix* in lexicographic order."""
+        node = self._find_node(prefix)
+        if node is None:
+            return []
+
+        words: list[str] = []
+
+        def collect(current: _TrieNode, word: str) -> None:
+            if current.is_word:
+                words.append(word)
+            for character in sorted(current.children):
+                collect(current.children[character], word + character)
+
+        collect(node, prefix)
+        return words
+
     def delete(self, word: str) -> bool:
         """Delete *word*, returning whether it was present."""
         node = self._root
