@@ -46,6 +46,21 @@ def test_get_missing_key_raises_key_error() -> None:
         cache.get("missing")
 
 
+def test_get_missing_key_does_not_update_recency() -> None:
+    cache = LRUCache[str, int](2)
+    cache.put("first", 1)
+    cache.put("second", 2)
+
+    with pytest.raises(KeyError):
+        cache.get("missing")
+    cache.put("third", 3)
+
+    with pytest.raises(KeyError):
+        cache.get("first")
+    assert cache.get("second") == 2
+    assert cache.get("third") == 3
+
+
 def test_peek_returns_value_without_updating_recency() -> None:
     cache = LRUCache[str, int](2)
     cache.put("a", 1)
