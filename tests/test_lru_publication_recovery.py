@@ -3,7 +3,7 @@ import pytest
 from toolkit.lru_cache import LRUCache
 
 
-def test_overwrite_then_peek_preserves_the_other_keys_recency() -> None:
+def test_overwrite_recency_survives_peek() -> None:
     cache = LRUCache[str, int](2)
     cache.put("older", 1)
     cache.put("newer", 2)
@@ -34,3 +34,20 @@ def test_get_refreshes_recency_after_intervening_insert() -> None:
     assert cache.get("third") == 3
     assert cache.get("fourth") == 4
     assert cache.get("fifth") == 5
+
+
+def test_multiple_gets_preserve_correct_eviction() -> None:
+    cache = LRUCache[str, int](3)
+    cache.put("a", 1)
+    cache.put("b", 2)
+    cache.put("c", 3)
+
+    assert cache.get("a") == 1
+    assert cache.get("b") == 2
+    cache.put("d", 4)
+
+    with pytest.raises(KeyError):
+        cache.get("c")
+    assert cache.get("a") == 1
+    assert cache.get("b") == 2
+    assert cache.get("d") == 4
