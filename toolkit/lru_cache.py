@@ -23,6 +23,10 @@ class LRUCache(Generic[K, V]):
         self._values[key] = value
         return value
 
+    def peek(self, key: K) -> V:
+        """Return ``key`` without changing recency, or raise ``KeyError``."""
+        return self._values[key]
+
     def put(self, key: K, value: V) -> None:
         """Insert ``value`` and mark ``key`` as the most recently used."""
         if key in self._values:
