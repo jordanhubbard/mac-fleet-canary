@@ -73,3 +73,25 @@ def test_empty_string_can_be_stored_and_deleted() -> None:
     assert trie.delete("")
     assert not trie.search("")
     assert not trie.starts_with("")
+
+
+def test_words_with_prefix_is_sorted_and_reflects_deletion() -> None:
+    trie = Trie()
+    for word in ["dog", "cat", "cart", "car", "car"]:
+        trie.insert(word)
+
+    assert trie.words_with_prefix("car") == ["car", "cart"]
+    assert trie.delete("car")
+    assert trie.words_with_prefix("car") == ["cart"]
+
+
+def test_words_with_prefix_handles_empty_and_missing_prefixes_without_mutation() -> None:
+    trie = Trie()
+    for word in ["dog", "cart", "car", "cat"]:
+        trie.insert(word)
+
+    expected = ["car", "cart", "cat", "dog"]
+    assert trie.words_with_prefix("") == expected
+    assert trie.words_with_prefix("z") == []
+    assert trie.words_with_prefix("") == expected
+    assert all(trie.search(word) for word in expected)
