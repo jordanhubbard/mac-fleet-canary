@@ -1,0 +1,1 @@
+- 2026-10-02: opencode via hub router end-to-end check (natasha)
